@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>酒店整体软装解决方案_室内设计与摆场陈设_恰维艺术</title>
+    <meta name="description" content="提供一站式酒店整体软装解决方案。恰维艺术从概念设计、方案深化到摆场陈设，全程把控设计效果。我们整合全球优质家具、灯具及饰品资源，确保设计落地的还原度。选择恰维，让您的酒店项目实现从图纸到实景的完美蜕变。">
+    <meta name="keywords" content="窗帘软装定制，全屋窗帘软装设计，地毯定制设计，软装挂画定制搭配，抱枕沙发软装定制，灯具软装搭配设计，布艺软装定制，全屋饰品软装定制">
+    <meta name="author" content="恰维艺术装饰">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        :root {
+            --warm-bg: #F8F5F0;
+            --warm-gold: #D4B17A;
+            --warm-brown: #8A6D3B;
+            --warm-light: #E8DCCA;
+            --text-dark: #333333;
+        }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--warm-bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 32px;
+            color: var(--warm-brown);
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 2px;
+            background-color: var(--warm-gold);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nav-logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+            object-fit: contain;
+        }
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+            object-fit: contain;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--warm-brown);
+            text-decoration: none;
+        }
+        .logo span {
+            color: var(--warm-gold);
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 16px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: var(--warm-gold);
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: var(--warm-brown);
+            cursor: pointer;
+        }
+        /* 媒体页面专属样式 */
+        .media-banner {
+            margin-top: 80px;
+            height: 400px;
+            background: linear-gradient(rgba(248,245,240,0.8), rgba(248,245,240,0.8)), url('https://picsum.photos/id/1070/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .media-banner-content {
+            width: 100%;
+        }
+        .media-banner h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 42px;
+            color: var(--warm-brown);
+            margin-bottom: 20px;
+        }
+        .media-banner p {
+            font-size: 18px;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        section {
+            padding: 80px 0;
+        }
+        .section-bg {
+            background-color: #fff;
+        }
+        .media-year {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 28px;
+            color: var(--warm-brown);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--warm-light);
+        }
+        .media-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .media-item {
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            min-height: 280px;
+            align-items: stretch;
+        }
+        .media-item:hover {
+            transform: translateY(-5px);
+        }
+        .media-img {
+            width: 250px;
+            height: 180px;
+            border-radius: 4px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .media-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .media-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .media-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: var(--warm-light);
+            color: var(--warm-brown);
+            font-size: 14px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+        .media-content h3 {
+            font-family: 'Noto Serif SC', serif;
+            color: var(--warm-brown);
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+        .media-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+        .media-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .media-excerpt {
+            color: var(--text-dark);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .media-read {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--warm-gold);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            width: fit-content;
+        }
+        .media-read:hover {
+            background-color: var(--warm-brown);
+        }
+        .empty-tip {
+            text-align: center;
+            padding: 50px 0;
+            color: #999;
+            font-size: 16px;
+        }
+        /* 弹出层样式 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal-content {
+            background-color: #fff;
+            max-width: 1000px;
+            width: 80%;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 8px;
+            padding: 40px;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+        @keyframes slideUp {
+            from { 
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            color: var(--warm-brown);
+            cursor: pointer;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+        .modal-close:hover {
+            color: var(--warm-gold);
+        }
+        .modal-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--warm-light);
+        }
+        .modal-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: var(--warm-light);
+            color: var(--warm-brown);
+            font-size: 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+        .modal-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 28px;
+            color: var(--warm-brown);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .modal-meta {
+            display: flex;
+            gap: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        .modal-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .modal-body {
+            font-size: 16px;
+            line-height: 2;
+            color: var(--text-dark);
+        }
+        .modal-body p {
+            margin-bottom: 20px;
+            text-indent: 2em;
+        }
+        .modal-body img {
+            width: 100%;
+            /*max-height: 400px;*/
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .modal-footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--warm-light);
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+        footer {
+            background-color: var(--warm-brown);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            display: flex;
+            align-items: center;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--warm-gold);
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .media-item {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .media-img {
+                width: 100%;
+                height: 220px;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                padding: 50px 0;
+                transition: 0.3s;
+            }
+            .nav-menu.active {
+                left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+            .media-banner h1 {
+                font-size: 32px;
+            }
+            .media-banner p {
+                font-size: 16px;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            .media-year {
+                font-size: 24px;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .media-item {
+                padding: 20px;
+            }
+            .media-content h3 {
+                font-size: 18px;
+            }
+            .modal-content {
+                padding: 30px 20px;
+            }
+            .modal-title {
+                font-size: 22px;
+            }
+            .modal-body {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 统一导航栏 + LOGO -->
+    <header>
+        <div class="container nav-bar">
+            <a href="index.html" class="logo">
+                <img src="./images/logo/joewer01.png" class="nav-logo" alt="恰维艺术装饰LOGO">
+                恰维<span>艺术</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">恰维是谁</a></li>
+                <li><a href="media.html">媒体关注</a></li>
+                <li><a href="case.html">案例展示</a></li>
+                <li><a href="view.html">恰维视角</a></li>
+                <li><a href="team.html">团队精英</a></li>
+                <li><a href="contact.html">联系恰维</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
+
+    <!-- 媒体页面Banner区域 -->
+    <section class="media-banner">
+        <div class="container media-banner-content">
+            <h1>媒体关注</h1>
+            <p>聚焦软装饰艺术的行业动态与软装设计理念，解读东方美学与极简软装的融合之道</p>
+        </div>
+    </section>
+
+    <!-- 2026年媒体报道 -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">媒体报道</h2>
+            <h3 class="media-year"></h3>
+            <div class="media-list">
+                <div class="media-item">
+                    <div class="media-img">
+                        <img src="./images/qrcode/joewerzhanting.png" alt="品牌创立报道">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag">品牌动态</span>
+                        <h3>《设计邦》：恰维艺术装饰品牌正式启用，聚焦高端软装设计与定制</h3>
+                        <div class="media-meta">
+                             <span>📰 设计邦</span>
+                        </div>
+                        <p class="media-excerpt">深耕酒店软装行业近20年的邓子先生正式启用恰维艺术装饰品牌，整合多年五星级酒店软装服务经验，面向商业大空间、高端住宅提供一站式软装定制服务，开启东方艺术软装饰新篇章... </p>
+                        <a href="#" class="media-read">阅读全文</a>
+                    </div>
+                </div>
+                            
+                              
+                <div class="media-item">
+                    <div class="media-img">
+                        <img src="./images/qrcode/qiuyu02.jpg" alt="品牌创立报道">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag">名人互动</span>
+                        <h3>艺通古今，赏润初心——余秋雨会见恰维艺术总监邓子，共话艺术使命</h3>
+                        <div class="media-meta">
+                             <span>📰 艺识流</span>
+                        </div>
+                        <p class="media-excerpt">秋雨先生说：自古艺术不分家，不论是文学艺术、绘画艺术、雕塑艺术还音乐艺术，他们的深层次的东西是相通的，无非是用不同的艺术语言来表现而已... </p>
+                        <a href="#" class="media-read">阅读全文</a>
+                    </div>
+                </div>
+
+                
+                <div class="media-item">
+                    <div class="media-img">
+                        <img src="./images/qrcode/shejizhidu02.jpg" alt="软装设计峰会">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag">名人专访</span>
+                        <h3>诗与水的风韵---《设计之都》杂志对艺术总监邓子专访</h3>
+                        <div class="media-meta">
+                        <span>📰 设计之都</span>
+                        </div>
+                        <p class="media-excerpt">国内著名专业设计杂志《设计之都》本期特邀专访了深耕酒店软装设计领域十余年、斩获多项行业大奖的艺术总监邓子先生... </p>
+                        <a href="#" class="media-read">阅读全文</a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <div class="media-img">
+                        <img src="./images/qrcode/zhongguoruanzhuang01.jpg" alt="软装行业年鉴">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag">大师视野</span>
+                        <h3>走在潮流前端---《中国软装》杂志对艺术总监邓子专访</h3>
+                        <div class="media-meta">
+                           <span>📰 中国软装</span>
+                        </div>
+                        <p class="media-excerpt">在体验经济席卷而来的今天，酒店早已不再仅仅是旅途中的歇脚地，而是成为了目的地本身。对于高星级酒店而言，硬装构建了空间的骨架，而软装则注入了空间的灵魂... </p>
+                        <a href="#" class="media-read">阅读全文</a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <div class="media-img">
+                        <img src="./images/logo/joewer00.png" alt="软装行业年鉴">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag">行业荣誉</span>
+                        <h3>《软装行业年鉴》：恰维入选年度最具潜力软装设计品牌</h3>
+                        <div class="media-meta">
+                           <span>📰 软装行业年鉴</span>
+                        </div>
+                        <p class="media-excerpt">2025年度软装行业年鉴发布，恰维艺术装饰凭借创新的设计理念、完善的服务体系和丰富的酒店软装经验，成功入选"年度最具潜力软装设计品牌"，成为软装饰领域的代表品牌... </p>
+                        <a href="#" class="media-read">阅读全文</a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <div class="media-img">
+                        <img src="./images/qrcode/dengzi.png" alt="软装设计峰会">
+                    </div>
+                    <div class="media-content">
+                        <span class="media-tag">行业峰会</span>
+                        <h3>《软装设计前沿》：恰维邓子先生分享酒店软装设计的东方表达</h3>
+                        <div class="media-meta">
+                        <span>📰 软装设计前沿</span>
+                        </div>
+                        <p class="media-excerpt">在2026中国软装设计峰会上，恰维艺术装饰艺术总监邓子先生分享了五星级酒店软装设计的东方表达思路，结合多年服务悦榕庄、香格里拉等酒店的经验，提出"地域文化+东方艺术+西方美学融合"的设计方法论... </p>
+                        <a href="#" class="media-read">阅读全文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 统一页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>
+                        <img src="./images/logo/joewer00.png" class="footer-logo" alt="恰维艺术装饰LOGO">
+                        恰维艺术
+                    </h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">恰维是谁</a></li>
+                        <li><a href="media.html">媒体关注</a></li>
+                        <li><a href="case.html">案例展示</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务板块</h4>
+                    <ul>
+                        <li><a href="view.html">恰维视角</a></li>
+                        <li><a href="team.html">团队精英</a></li>
+                        <li><a href="contact.html">联系恰维</a></li>
+                        <li><a href="contact.html#form">在线咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>核心业务</h4>
+                    <ul>
+                        <li><a href="case.html#hotel">酒店软装定制</a></li>
+                        <li><a href="case.html#commercial">商业空间软装</a></li>
+                        <li><a href="case.html#residence">高端住宅软装</a></li>
+                        <li><a href="case.html#villa">别墅整体软装</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：15801815518</li>
+                        <li>邮箱：joeton@qq.com</li>
+                        <li>地址：上海市南京西路1266号恒隆广场B-15F</li>
+                        <li>地址：苏州市锦耀路333号长泰淀湖观园3502号</li>
+                        <li>营业时间：9:00-17:00（周一至周六）</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p><a href="https://beian.miit.gov.cn" target="_blank" style="color: #fff; text-decoration: none;">沪ICP备：2022032618-3 号</a></p>
+                <p>© 2026 恰维艺术 版权所有 | 恰维艺术装饰-恰维软装</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 文章详情弹出层 -->
+    <div id="articleModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <span id="modalTag" class="modal-tag"></span>
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <div class="modal-meta">
+                    <span id="modalSource"></span>
+                    <span id="modalDate"></span>
+                    <span id="modalAuthor"></span>
+                </div>
+            </div>
+            <div id="modalBody" class="modal-body">
+                <!-- 文章内容将在这里动态插入 -->
+            </div>
+            <div class="modal-footer">
+                <p>— 本文完 —</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端菜单交互脚本 -->
+    <script>
+        // 汉堡菜单交互
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // 点击菜单外区域关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // 弹出层功能
+        const modalOverlay = document.getElementById('articleModal');
+        const modalClose = document.querySelector('.modal-close');
+        const readMoreButtons = document.querySelectorAll('.media-read');
+
+        // 文章内容数据（小白直接在这里修改内容）
+        const articleData = {
+            article1: {
+                tag: '品牌动态',
+                title: '《设计邦》：恰维艺术装饰品牌正式启用，聚焦高端软装设计与定制',
+                source: '📰 设计邦',
+                date: '📅 2026-01-08',
+                author: '✍️ 品牌观察员',
+                content: `
+                    <p>深耕酒店软装行业20多年的邓子先生正式启用恰维艺术装饰品牌，用多年五星级酒店软装服务经验，面向五星级酒店、商业大空间、高端住宅提供一站式软装定制服务。</p>
+                    
+                    <img src="./images/qrcode/joewerzhanting.png" alt="品牌创立">
+                    
+                    <p>邓子先生曾服务于多家国际知名酒店集团，参与过上百家五星级酒店项目的软装设计与实施。丰富的实战经验让他深刻认识到中国市场对高品质软装设计的巨大需求。</p>
+                    
+                    <p>"恰维的创立源于一个简单的心愿：让更多中国人享受到世界级的软装设计服务。"邓子先生表示，"我们将把服务国际酒店的专业标准和设计理念，应用到更广泛的商业空间和住宅项目中。"</p>
+                    
+                    <p>恰维艺术装饰的核心优势在于：一是拥有国际化的设计视野和本土化的服务能力；二是建立了完善的供应链体系，能够提供高品质的定制产品；三是采用全流程服务模式，从需求分析、方案设计到产品采购、定制、现场布置，提供一站式解决方案。</p>
+                    
+                    <p>品牌创立以来，恰维已成功完成多个标志性项目，包括高端会所、精品酒店、别墅豪宅等，获得了客户的高度认可。公司团队也不断壮大，老团队不断回归，汇聚了一批国内国际优秀的设计师和项目管理人才。</p>
+                    
+                    <p>未来，恰维艺术装饰将继续秉持"东方美学·现代表达"的设计理念，致力于成为中国领先的软装设计品牌，开启东方极简软装新篇章。</p>
+                `
+            },
+            article2: {
+                tag: '名人互动',
+                title: '艺通古今，赏润初心——余秋雨会见恰维艺术总监邓子，共话艺术使命',
+                source: '📰 艺识流',
+                date: '📅 2026-1-06',
+                author: '✍️ 名人对话专栏',
+                content: `
+                    <p>近日，著名文化史学家、散文家余秋雨先生与恰维艺术总监邓子先生举行亲切会见。这场跨越文学与艺术装饰领域的相逢，以艺为媒、以心相交，不仅见证了两位艺术家的惺惺相惜，更传递出“艺术同源、美美与共”的深刻理念，为当下艺术创作与交流注入温暖力量。</p>
+                    
+                    <img src="./images/qrcode/qiuyu01.jpg" alt="品牌创立">
+                    
+                    <p>会见现场氛围融洽，余秋雨先生首先向邓子先生送上了两份饱含心意的赠礼。一份是由他本人参与设计、以其名字命名的“秋雨雅赏”定制茶具，壶身雅致、釉色温润，将文人意趣与实用美学完美融合，恰如余秋雨先生一贯的文化表达，简约中藏着深厚底蕴——据悉，余秋雨先生素来关注传统工艺与文人美学的结合，曾参与紫砂茶具设计，将文字意境与陶土匠心相融，赋予器物文化温度。另一份则是余秋雨先生的经典专著《寻觅中华》，书中系统梳理了他从灾难时期开始一步步寻觅的中华文化史，文字兼具文学之美与思想深度，余秋雨先生亲自为书籍签名，以此寄托对邓子先生的期许与敬意，也搭建起文学与艺术装饰领域交流的桥梁。</p>
+                    
+                    <img src="./images/qrcode/qiuyu02.jpg" alt="品牌创立">
+
+                    <p>谈及艺术的本质与使命，余秋雨先生分享了自己的深刻感悟。他坦言：“自古艺术不分家，不论是文学艺术、绘画艺术、雕塑艺术还是音乐艺术，它们深层次的东西是相通的，无非是用不同的艺术语言来表现而已。”在他看来，所有艺术形式的核心归宿都是一致的，“最终都是为人类灵魂深处最高尚神圣的美而服务”，这份对美的共同追求，正是不同艺术领域得以相融共生、彼此成就的根基。</p>
+                    
+                    <img src="./images/qrcode/qiuyu03.jpg" alt="品牌创立">
+
+                    <p>期间，余秋雨先生还对邓子先生在艺术装饰领域的成就给予了高度肯定。他特别提及邓子先生远赴俄罗斯圣彼得堡设计并制作波罗的海明珠酒店的经历，称赞其“为艺术装饰领域做了自己的贡献”，更在世界舞台上成功展示了东方艺术的独特魅力，让东方美学跨越国界、被更多人看见。同时，余秋雨先生也表达了对邓子先生未来创作的殷切期待，期盼他能坚守艺术初心，再创更多兼具东方底蕴与时代特色的优秀作品，为艺术装饰领域的发展注入新活力。</p>
+                    
+                    <img src="./images/qrcode/qiuyu04.jpg" alt="品牌创立">
+
+                    <p>作为国内实力新锐设计师，邓子先生深耕艺术装饰领域十余年，擅长将东方美学与现代设计相结合，曾斩获多项国内国际设计大奖，其作品兼具创意与质感，深受业内认可。会见中，邓子先生对余秋雨先生的赠礼与肯定表示诚挚感谢，并表示将牢记嘱托，在未来的创作中，继续深耕东方艺术，推动艺术装饰与多元艺术形式的融合，不辜负余秋雨先生的期许，努力在世界舞台上传递更多东方艺术的魅力。</p>
+                    
+                    <p>一场短暂的会见，承载着两位艺术家对艺术的赤诚与热爱；一次深入的交谈，彰显了不同艺术领域相融共生的美好愿景。余秋雨先生的文学智慧与邓子先生的设计匠心，在这场相逢中碰撞出璀璨火花，也让我们看到，艺术从来没有边界，唯有坚守对美的追求，才能跨越领域、穿越时光，绽放出永恒的魅力。未来，相信会有更多像余秋雨、邓子这样的艺术家，以艺为桥，推动不同艺术领域的交流与发展，让中华优秀传统文化在新时代焕发新的生机。</p>
+                `
+            },
+            article3: {
+                tag: '名人专访',
+                title: '诗与水的风韵---《设计之都》杂志对艺术总监邓子专访',
+                source: '📰 设计之都',
+                date: '📅 2025-12-21',
+                author: '✍️ 特约记者 梁怡',
+                content: `
+                    <p>国内著名专业设计杂志《设计之都》本期特邀专访了深耕酒店软装设计领域十余年、斩获多项行业大奖的艺术总监邓子先生，聚焦其主导设计的杭州西溪悦椿酒店，深挖西溪湿地酒店集群中，地域文化与不同酒店品牌特色的融合之道，解锁江南水韵与现代酒店软装设计的碰撞密码。</p>
+                    
+                    <img src="./images/qrcode/shejizhidu01.jpg" alt="设计之都">
+                    
+                    <p>杭州西溪悦椿酒店，是国际知名酒店管理品牌悦榕庄集团旗下的特色主题酒店，也是邓子先生带领团队在杭州西溪湿地酒店集群中，继杭州西溪喜来登酒店之后，打造的又一五星级酒店力作。作为毗邻西溪湿地、浸润江南文脉的酒店集群，如何在统一的地域文化底色上，凸显不同酒店的品牌调性与定位差异，成为软装设计过程中的核心难题——集群内酒店共享西溪湿地的自然与人文基因，而各品牌的核心诉求、目标客群却截然不同，地域文化的取舍与提炼，成为决定设计成败的关键。</p>
+                    
+                    <p>谈及此前主导设计的西溪喜来登酒店，邓子先生在专访中表示，该酒店的软装设计核心的是“城市度假”定位，既要满足城市商务会议、高端餐饮、商务住宿等多元接待需求，又要深度融入西溪湿地的休闲度假氛围，实现“都市繁华与自然静谧”的双向平衡。为此，软装设计上巧妙融合徽派建筑元素与西溪本土特色，大堂天花板采用贝壳贴片装饰，灯光映照下五彩斑斓，中空区域大量运用竹制品，搭配杭州刺绣、陶艺等本土元素，与湿地竹林景观遥相呼应，尽显清新高雅的气质；客房阳台栅栏设计原型源自西溪湿地鸟瞰图，将交织的水道以艺术手法呈现，让宾客在休憩中也能感知湿地肌理；餐厅区域则根据不同业态打造差异化风格，采悦轩中餐厅以“西湖雨”为主题，水滴状吊灯与墙面涟漪纹理呼应，尽显江南温婉，萨婷法餐厅则以复古水晶灯、皮质装饰打造华丽质感，实现中西美学的碰撞，全方位契合“城市度假”的多元需求。</p>
+                    
+                    <img src="./images/qrcode/shejizhidu02.jpg" alt="设计之都">
+
+                    <p>而对于西溪悦椿酒店的软装设计，邓子先生则有着更为细腻的考量。深知悦榕庄集团对地域文化融合的极致追求，他带领团队与悦榕庄集团反复研讨，最终将酒店定位为“城市度假精品酒店”，以“江南诗画+杭州底蕴”为核心，区别于西溪喜来登的多元兼容，更侧重人文质感与静谧体验的营造。软装设计上，以杭州城市老照片为核心视觉线索，将老杭州的街巷烟火、西溪湿地的四季风光融入空间各处，搭配白墙黛瓦的中式合院建筑基底，让酒店自带江南水墨画的雅致意境；大堂采用沉稳的新中式风格，深色木构搭配水墨挂画，中央悬挂由无数水晶珠串联而成的圆幕，灵感源自江南朦胧烟雨，与西溪的水韵气质完美契合，空气中萦绕的悦榕系标志性熏香，进一步烘托出静谧安神的氛围；客房以芙蓉红与天青石蓝为主题色，墙面悬挂西溪湿地实景照片，暖黄色灯光搭配柔软床品，再辅以镂空雕花、真丝刺绣等细节软装，既彰显杭州文化沉淀，又兼顾现代宾客的居住舒适度；公区则以蜿蜒水道、茂密绿植呼应西溪湿地风貌，雨天雾蒙蒙时，整个空间宛如一幅活态江南画卷。</p>
+                    
+                    <img src="./images/qrcode/shejizhidu03.jpg" alt="设计之都">
+                    
+                    <p>邓子先生强调，西溪湿地酒店集群的软装设计，核心不在于元素的堆砌，而在于“精准匹配”——匹配品牌定位、匹配客群需求、匹配地域文脉。西溪喜来登的软装是“兼容并蓄”，兼顾商务与度假，凸显大气与灵动；西溪悦椿则是“精雕细琢”，深耕本土人文，彰显个性与底蕴，也正因如此，西溪悦椿酒店成为悦榕庄旗下最具个性、最富杭州文化底蕴的精品酒店，成为江南酒店软装设计中，地域文化与品牌特色融合的典范之作。</p>
+                    
+                    <p>诚邀各界人士莅临杭州西溪悦椿酒店，沉浸式体验邓子先生主导的软装设计精品，在江南水韵与人文肌理中，感受悦榕庄酒店的贴心服务，邂逅一场诗与水的美好邂逅。</p>
+                `
+            },
+            article4: {
+                tag: '大师视野',
+                title: '走在潮流前端---《中国软装》杂志对艺术总监邓子专访',
+                source: '📰 中国软装',
+                date: '📅 2025-12-28',
+                author: '✍️ 特约记者 安妮',
+                content: `
+                    <p>在体验经济席卷而来的今天，酒店早已不再仅仅是旅途中的歇脚地，而是成为了目的地本身。对于高星级酒店而言，硬装构建了空间的骨架，而软装则注入了空间的灵魂。如何在同质化严重的市场中突围？如何让空间叙事跟上甚至引领时代的审美变迁？</p>
+                    
+                    <p>带着这些问题，我们专访了恰维艺术总监邓子。作为在艺术设计领域深耕多年的资深专家，邓子以其敏锐的嗅觉和独到的见解，向我们阐述了“走在潮流前端”的软装哲学。</p>
+                   
+                    <img src="./images/qrcode/zhongguoruanzhuang01.jpg" alt="中国软装">
+                    
+                    <p>一、 拒绝“复制粘贴”：潮流是文化的当代表达</p>
+                    
+                    <p>《中国软装》：邓总您好。目前市场上很多酒店软装存在“千店一面”的现象，您认为当下的“潮流”究竟是什么？</p>
+                    
+                    <p>邓子：这确实是一个痛点。很多人误以为潮流就是某种特定的风格，比如前几年的工业风，或者现在的侘寂风。其实，真正的潮流不是简单的风格复制，而是文化在当下的表达方式。</p>
+                    
+                    <p>恰维在设计时，从来不追逐短暂的流行符号。我们认为，走在潮流前端，意味着要挖掘地域文化的内核，并用现代的设计语言去重构它。比如我们在做一个江南水乡的项目时，没有直接挂水墨画，而是提取了“水”的流动性与“黛瓦”的肌理，通过现代装置艺术和抽象织物来呈现。</p>
+                    
+                    <p>潮流是流动的，但文化是永恒的。只有将两者结合，酒店软装才能既有“颜值”又有“内涵”，才能在第一眼就抓住客人的心。</p>
+
+                    <p>二、 五感设计：从“视觉冲击”到“情感共鸣”</p>
+                    
+                    <p>《中国软装》：您提到软装要注入灵魂，具体到执行层面，恰维是如何做到的？</p>
+                    
+                    <p>邓子：传统的软装往往过于注重视觉效果，也就是“好不好看”。但走在潮流前端的软装，关注的是“五感体验”。</p>
+                    
+                    <p>视觉只是第一层。我们在设计中会更多地考虑触觉（面料的温润度）、嗅觉（空间的气味系统）、听觉（声学环境对软装材质的要求）甚至味觉的联想。</p>
+                    
+                    <p>例如，在商务酒店的行政酒廊，我们会选择触感细腻、色泽沉稳的皮革与丝绒，搭配暖色调的灯光，营造一种“私密与放松”的心理暗示；而在度假酒店的亲子区，则会大量使用棉麻、原木等亲肤材质，色彩上更加明快活泼。</p>
+
+                    <p>软装不仅仅是摆几件艺术品，而是要通过物品的组合，构建一种场域，让客人在进入空间的那一刻，产生情感上的共鸣。这种共鸣，才是最高级的潮流。</p>
+                    
+                    <img src="./images/qrcode/zhongguoruanzhuang02.jpg" alt="中国软装">
+
+                    <p>三、 艺术与商业的平衡：为运营赋能</p>
+                    
+                    <p>《中国软装》：酒店毕竟是商业项目，作为艺术总监，您如何看待艺术性与商业性的平衡？</p>
+                    
+                    <p>邓子：这是一个非常务实的问题。很多设计师容易陷入“自我表达”的误区，但恰维始终认为，最好的设计是为运营赋能的。</p>
+                    
+                    <p>走在潮流前端，不仅指审美，也指对商业逻辑的洞察。现在的年轻客群（Z世代）是社交媒体的重度用户。我们的软装设计会刻意制造“记忆点”和“打卡点”，但这绝不是生硬的网红风，而是通过独特的艺术装置或极具张力的色彩搭配，激发客人的分享欲。</p>
+
+                    <p>当客人举起手机拍照分享的那一刻，软装就成了酒店免费的传播媒介。同时，我们也会考虑材质的耐用性、维护成本以及未来更新迭代的便捷性。既要有艺术的高度，又要有落地的温度，这才是成熟的设计顾问应该具备的素质。</p>
+                    
+                    <p>评审委员会认为，恰维艺术装饰在以下几个方面表现突出：一是设计理念先进，将东方美学与现代极简风格完美融合；二是服务体系完善，提供从方案设计到产品定制的一站式服务；三是项目经验丰富，成功完成多个五星级酒店和高端住宅项目。</p>
+                    
+                    <p>四、 展望未来：可持续与科技共生</p>
+                    
+                    <p>《中国软装》：对于未来3-5年的酒店软装趋势，您有什么预判？</p>
+                    
+                    <p>邓子：我认为有两个关键词：可持续与科技共生。</p>
+
+                    <p>环保不再是口号，而是高端酒店的标配。使用可再生材料、环保涂料，以及具有“时间痕迹”的自然材质，将是未来的大趋势。这本身也是一种高级的审美潮流——对自然的敬畏。</p>
+                    
+                    <p>另一方面，科技正在改变我们的生活，软装也不能固步自封。比如智能调光玻璃、互动投影墙面等科技元素与艺术软装的结合，会创造出前所未有的空间体验。恰维正在探索如何将冰冷的科技通过艺术化的手段“软化”进空间里，让人与空间的交互更加自然。</p>
+                    
+                    <p>结语：</p>
+                    
+                    <p>采访最后，邓子总结道：“酒店软装是一场关于时间与空间的对话。我们不仅要装饰空间，更要预见未来。”</p>
+                    
+                    <p>恰维艺术顾问正是秉持着这样的理念，在潮流的浪尖上起舞，用艺术点亮了无数酒店空间。在邓子看来，所谓“走在潮流前端”，不过是对生活保持热爱，对美保持敬畏，并永远比客人多想一步。</p>
+        
+                `
+            },
+          article5:{
+                tag: '行业荣誉',
+                title: '《软装行业年鉴》：恰维入选年度最具潜力软装设计品牌',
+                source: '📰 软装行业年鉴',
+                date: '📅 2025-12-28',
+                author: '✍️ 年鉴编辑部',
+                content: `
+                    <p>2025年度软装行业年鉴正式发布，恰维艺术装饰凭借创新的设计理念、完善的服务体系和丰富的酒店软装经验，成功入选"年度最具潜力软装设计品牌"。</p>
+                    
+                    <img src="./images/qrcode/joewerzhanting.png" alt="获奖证书">
+                    
+                    <p>作为中国软装行业的权威出版物，《软装行业年鉴》每年评选出一批在设计创新、服务质量、市场口碑等方面表现突出的品牌和设计师。此次入选，标志着恰维艺术装饰已成为新中式极简软装领域的代表品牌。</p>
+                    
+                    <p>评审委员会认为，恰维艺术装饰在以下几个方面表现突出：一是设计理念先进，将东方美学与现代极简风格完美融合；二是服务体系完善，提供从方案设计到产品定制的一站式服务；三是项目经验丰富，成功完成多个五星级酒店和高端住宅项目。</p>
+                    
+                    <p>恰维艺术装饰创始人邓子先生表示："这份荣誉是对我们团队的肯定，也是对我们设计理念的认可。我们将继续坚持初心，为客户提供更优质的软装设计服务。"</p>
+                    
+                    <p>据悉，恰维艺术装饰团队，已服务超过上100家五星级酒店项目，客户满意度保持在95%以上。公司拥有一支经验丰富的设计团队，成员均来自知名设计院校，具备深厚的专业功底和丰富的实践经验。</p>
+                    
+                    <p>展望未来，恰维艺术装饰将继续深耕软装设计领域，不断探索创新，为推动中国软装行业的发展贡献力量。</p>
+                `
+            },  
+            article6:  {
+                tag: '行业峰会',
+                title: '《软装设计前沿》：恰维邓子先生分享酒店软装设计的东方表达',
+                source: '📰 软装设计前沿',
+                date: '📅 2025-12-20',
+                author: '✍️ 编辑部',
+                content: `
+                    <p>在2025中国软装设计峰会上，恰维艺术装饰艺术总监邓子先生发表了题为"酒店软装设计的东方表达"的主题演讲，引发业内广泛关注。</p>
+                    
+                    <img src="./images/qrcode/dengzi.png" alt="邓子先生演讲">
+                    
+                    <p>邓子先生结合多年服务悦榕庄、香格里拉等五星级酒店的经验，提出了"地域文化+东方艺术+西方美学融合"的设计方法论。他认为，酒店软装设计不仅要体现品牌调性，更要融入当地文化特色，为宾客创造独特的入住体验。</p>
+                    
+                    <p>"东方美学不是简单的符号堆砌，而是一种生活哲学和审美态度。"邓子先生指出，在现代酒店设计中，应该用当代的设计语言诠释传统文化，让东方韵味自然流露，而非刻意营造。</p>
+                    
+                    <p>他分享了多个成功案例，包括如何将江南水乡的柔美融入上海某精品酒店的软装设计，如何把西北的粗犷豪迈转化为西安某度假酒店的空間气质。这些案例充分展现了恰维团队对地域文化的深刻理解和创新运用能力。</p>
+                    
+                    <p>邓子先生还强调，酒店软装设计需要兼顾美观性与实用性，既要营造氛围，又要考虑后期维护和管理。恰维团队在设计过程中，会与酒店管理方紧密合作，确保设计方案既符合审美要求，又便于日常运营。</p>
+                    
+                    <p>此次演讲获得了与会嘉宾的高度评价，多位业内人士表示，邓子先生的分享为酒店软装设计提供了新的思路和方向。</p>
+                `
+            },
+        };
+
+        // 打开弹出层函数
+        function openModal(articleId) {
+            const article = articleData[articleId];
+            if (!article) {
+                console.error('找不到文章:', articleId);
+                return;
+            }
+
+            // 填充内容
+            document.getElementById('modalTag').textContent = article.tag;
+            document.getElementById('modalTitle').textContent = article.title;
+            document.getElementById('modalSource').textContent = article.source;
+            document.getElementById('modalDate').textContent = article.date;
+            document.getElementById('modalAuthor').textContent = article.author;
+            document.getElementById('modalBody').innerHTML = article.content;
+
+            // 显示弹出层
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            console.log('弹出层已打开:', articleId);
+        }
+
+        // 关闭弹出层函数
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            console.log('弹出层已关闭');
+        }
+
+        // 绑定"阅读全文"按钮点击事件
+        readMoreButtons.forEach((button, index) => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const articleId = 'article' + (index + 1);
+                console.log('点击了第' + (index + 1) + '篇文章');
+                openModal(articleId);
+            });
+        });
+
+        // 关闭按钮点击事件
+        modalClose.addEventListener('click', closeModal);
+
+        // 点击遮罩层关闭
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // ESC键关闭
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
